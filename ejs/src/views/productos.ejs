@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+    <%- include('./partials/head.ejs')  %>
+<body>
+    <%- include('./partials/navBar.ejs')  %>
+    <div class="container-md mt-5 p-3">
+        <% if(productos){ %>
+        <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <% productos.forEach(function(prod) { %>
+            <tr>
+                <td><%= prod.titulo %></td>
+                <td><%= prod.precio %></td>
+                <td><img style="max-width: 60px;" src=<%= prod.thumbnail %> alt=<%= prod.titulo %> class="w-100"></td>
+            </tr>
+            <% }); %>
+        </tbody>
+        </table>
+        <% }else{ %>
+        <div class="h5 text-center alert alert-secondary">No hay productos</div>
+        <% }; %>
+    </div>
+    <%- include('./partials/footer.ejs')  %>
+</body>
+</html>
