@@ -1,0 +1,20 @@
+extends layout.pug
+
+block content
+    .container-md.mt-5.p-3
+        if productos
+            table.table
+                thead
+                    tr
+                        th(scope='col') Nombre
+                        th(scope='col') Precio
+                        th(scope='col') Foto
+                tbody
+                    each items in productos
+                        tr
+                            td=items.titulo
+                            td=items.precio
+                            td
+                                img.w-100(style='max-width: 60px;' src=items.thumbnail alt=items.titulo)
+        else
+            .h5.text-center.alert.alert-secondary No hay productos

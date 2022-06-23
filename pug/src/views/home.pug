@@ -1,0 +1,21 @@
+extends layout.pug
+
+block content
+    .container-md.mt-5.border.rounded.p-3.bg-light
+        .h4 Entregable N&ordm; 5
+        .h5.mb-3.border-bottom.pb-2 Alumno: Juan Manuel Rodriguez Van Oyen
+        div
+            p.h5.mb-2 Desaf&iacute;o: Incorporando Handlebars.
+        if formAlert
+            .alert.alert-success.mt-4(role='alert')
+                | Perfecto, hemos guardado el producto.
+        .mt-4
+            form.needs-validation(action='/productos' method='POST' novalidate='')
+                .h5.mb-2 Ingrese un producto: 
+                .mb-3
+                    input.form-control(type='text' name='titulo' placeholder='Titulo' autocomplete='off' required='')
+                .mb-3
+                    input.form-control(type='number' name='precio' placeholder='Precio' autocomplete='off' required='')
+                .mb-3
+                    input.form-control(type='url' name='thumbnail' autocomplete='off' placeholder='Thumbnail' required='')
+                button.btn.btn-primary(type='submit') ENVIAR
