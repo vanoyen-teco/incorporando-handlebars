@@ -5,7 +5,7 @@
 
 En el presente repositorio se trabajó la consigna indicada utilizando los diferentes motores de plantillas.
 
-Handlebars, Pub, Ejs.
+Handlebars, Pug, Ejs.
 
 # Conclusión:
 Habiendo probado los tres motores de plantillas antes mencionados encuentro dos de ellos (Handlebars y Ejs) de sencilla implementación. 
